@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './components/nav.js';
+import Header from './components/header.js'
+import Footer from './components/footer.js'
+import Section from './components/section.js'
+import Links from './data/links.json';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  return(
+    // No se puede retornar mas de un elemento
+    // React.Fragment (permite englobar varios elementos)
+    <>
+      <Nav appName="cReact" links={Links}/>
+      <Header/>
+      <Section title="a" content={'section 1'} />
+      <Section title="b" content={'section 2'} />
+      <Section title="c" content={'section 3'} />
+      <Footer/>
+    </>
+  )
 }
 
 export default App;
