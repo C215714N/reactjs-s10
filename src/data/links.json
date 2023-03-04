@@ -1,0 +1,27 @@
+[
+    {
+        "href": "home",
+        "className": "fa fa-house",
+        "text": "Inicio"
+    },    
+    {
+        "href": "about",
+        "className": "fa fa-newspaper",
+        "text": "Acerca"
+    },    
+    {
+        "href": "products",
+        "className": "fa fa-picture",
+        "text": "Productos"
+    },    
+    {
+        "href": "services",
+        "className": "fa fa-truck",
+        "text": "Servicios"
+    },    
+    {
+        "href": "contact",
+        "className": "fa fa-user",
+        "text": "Contacto"
+    }
+]
