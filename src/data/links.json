@@ -1,8 +1,8 @@
 [
     {
-        "href": "home",
+        "href": "users",
         "className": "fa fa-house",
-        "text": "Inicio"
+        "text": "Usuarios"
     },    
     {
         "href": "about",
@@ -11,7 +11,7 @@
     },    
     {
         "href": "products",
-        "className": "fa fa-picture",
+        "className": "fa fa-box",
         "text": "Productos"
     },    
     {

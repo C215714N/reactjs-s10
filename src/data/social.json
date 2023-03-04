@@ -1,0 +1,18 @@
+[
+    {
+        "link": "https://facebook.com/",
+        "class": "fas fa-facebook-f"
+    },
+    {
+        "link": "https://instagram.com",
+        "class": "fas fa-instagram"
+    },
+    {
+        "link": "https://api.whatstapp.com",
+        "class": "fas fa-whatstapp"
+    },
+    {
+        "link": "https://twitter.com",
+        "class": "fas fa-twitter"
+    }
+]
