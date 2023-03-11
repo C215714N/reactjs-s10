@@ -1,35 +1,44 @@
 // Dependencias
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 
 // Componentes 
 import Nav from './components/nav.js';
-import Header from './components/header.js'
-import Footer from './components/footer.js'
-import Section from './components/section.js'
+import Header from './components/header.js';
+import Table from './components/table.js';
+import Footer from './components/footer.js';
+import Section from './components/section.js';
 
 // Estructura de Datos
 import Links from './data/links.json';
 import Social from './data/social.json';
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [data, setData] = useState([]);
   const url = "https://jsonplaceholder.typicode.com/"
 
-  const getData = (url) =>{
-    fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      setUsers(data)
-    })
+  const getData = async(url) =>{
+    try{
+      let data = await fetch(url);
+      data = await data.json();
+      setData(data)
+    }
+    catch(e){
+      console.log(e)
+    }
   }
 
   return(
     // Administra la API History
     <BrowserRouter>
-      <Nav users={users} setUsers={setUsers} url={url} appName="cReact" links={Links} action={getData}/>
+      <Nav url={url} appName="cReact" links={Links} action={getData}/>
       <Header/>
       {/* Define los elementos que se alternaran */}
+      <div className="table-responsive">
+        <Table data={data}/>
+      </div>
       <Routes>
         <Route path='/users' element={
           <Section title="Bienvenido" content={'section 1'} /> } />
