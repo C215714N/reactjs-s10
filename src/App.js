@@ -1,4 +1,5 @@
 // Dependencias
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Componentes 
@@ -10,23 +11,23 @@ import Section from './components/section.js'
 // Estructura de Datos
 import Links from './data/links.json';
 import Social from './data/social.json';
-import { useState } from 'react';
 
 function App() {
-  const state = {
-    users: []
-  }
+  const [users, setUsers] = useState([]);
   const url = "https://jsonplaceholder.typicode.com/"
+
   const getData = (url) =>{
     fetch(url)
     .then(res => res.json())
-    .then(data => setState({users: data}))
+    .then(data => {
+      setUsers(data)
+    })
   }
 
   return(
     // Administra la API History
     <BrowserRouter>
-      <Nav url={url} appName="cReact" links={Links} action={getData}/>
+      <Nav users={users} setUsers={setUsers} url={url} appName="cReact" links={Links} action={getData}/>
       <Header/>
       {/* Define los elementos que se alternaran */}
       <Routes>

@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 export default function Nav(props){
-    const { url, appName, links, action } = props;
+    const { url, appName, links, action, users, setUsers } = props;
     return(
         <nav>
             <a href="#">{ appName }</a>
-            <button onClick={() => action(url +"users")}>
+            <button onClick={async() => {
+                action(url +"users?id=1"); 
+                await console.log(users)
+                }}>
                 consultar usuarios
             </button>
             <List links={ links } />
