@@ -23,7 +23,7 @@ const TableBody = (props) => {
         <tbody>
         { data.map((row,i) => <tr key={"row-" + i}>
             { titles.map((t,i) => typeof row[t] == 'object' ? 
-                <td key={"td-" + i}>para mapear</td> : 
+                <td key={"td-" + i}><List data={row[t]}/></td> : 
                 <td key={"td-" + i}>{ row[t] }</td>
             ) }
         </tr> ) }
@@ -34,4 +34,16 @@ const TableBody = (props) => {
 function getHeadings(obj){
     return Object.keys(obj);
 }
+
+function List(props){
+    const { data } = props;
+    const titles = getHeadings(data);
+    return (
+    <ul>
+        { titles.map( (t,i) => <li key={"item-" + i}>
+            <strong>{t}:</strong> { typeof data[t] == 'object' ? 
+            <List data={data[t]}/> : data[t] }
+        </li> ) }
+    </ul>
+) }
 export default Table;
