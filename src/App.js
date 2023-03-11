@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
+import './App.css';
 
 // Componentes 
 import Nav from './components/nav.js';
@@ -37,7 +38,7 @@ function App() {
       <Header/>
       {/* Define los elementos que se alternaran */}
       <div className="table-responsive">
-        <Table data={data}/>
+        <Table data={data.data ? data.data : data}/>
       </div>
       <Routes>
         <Route path='/users' element={

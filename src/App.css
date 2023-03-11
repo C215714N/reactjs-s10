@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.table td > ul{
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
