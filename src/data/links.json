@@ -5,23 +5,23 @@
         "text": "Usuarios"
     },    
     {
-        "href": "about",
-        "className": "fa fa-newspaper",
-        "text": "Acerca"
+        "href": "posts",
+        "className": "fa fa-signs-post",
+        "text": "Muro"
     },    
     {
-        "href": "products",
-        "className": "fa fa-box",
-        "text": "Productos"
+        "href": "todos",
+        "className": "fa fa-list",
+        "text": "Lista de Tareas"
     },    
     {
-        "href": "services",
-        "className": "fa fa-truck",
-        "text": "Servicios"
+        "href": "albums",
+        "className": "fa fa-camera",
+        "text": "Albumes"
     },    
     {
-        "href": "contact",
-        "className": "fa fa-user",
-        "text": "Contacto"
+        "href": "photos",
+        "className": "fa fa-image",
+        "text": "Fotos"
     }
 ]
