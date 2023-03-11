@@ -42,3 +42,6 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
+.card{
+  min-width: min(100%, 320px);
+}
