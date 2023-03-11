@@ -1,3 +1,6 @@
+import getHeadings from '../actions/heading';
+import List from './list';
+
 const Table = (props) => props.data == '' ? 
 'No se consultaron Usuarios' :
 <table className="table table-striped table-dark">
@@ -31,19 +34,4 @@ const TableBody = (props) => {
     )
 }
 
-function getHeadings(obj){
-    return Object.keys(obj);
-}
-
-function List(props){
-    const { data } = props;
-    const titles = getHeadings(data);
-    return (
-    <ul>
-        { titles.map( (t,i) => <li key={"item-" + i}>
-            <strong>{t}:</strong> { typeof data[t] == 'object' ? 
-            <List data={data[t]}/> : data[t] }
-        </li> ) }
-    </ul>
-) }
 export default Table;
