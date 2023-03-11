@@ -7,7 +7,7 @@ export default function Nav(props){
     return(
         <nav className="navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | px-3 sticky-top">
             <a href="#" className="navbar-brand">{ appName }</a>
-            <button className="navbar-toggler navbar-toggler-icon" onClick={() => action(giphy)}></button>
+            <button className="navbar-toggler navbar-toggler-icon" data-bs-toggle="collapse" data-bs-target=".navbar-nav"></button>
             <List links={ links } action={action} url={url} />
         </nav>
 ) }
@@ -15,7 +15,7 @@ export default function Nav(props){
 const List = (props) => {
 const { url, action, links} = props;
 return(
-<ul className="navbar-nav navbar-collapse"> { links.map( (link, i) => 
+<ul className="navbar-nav navbar-collapse collapse | align-items-start"> { links.map( (link, i) => 
     <li key={i} className="nav-item">
         <NavLink to={link.href} onClick={() => action(url + link.href)} className="nav-link">
             <span className={ "pe-2 | " + link.className }></span>

@@ -36,11 +36,10 @@ function App() {
     <BrowserRouter>
       <Nav url={url} appName={appName} links={Links} action={getData}/>
       <Header appName={appName} action={getData} />
-      {/* Define los elementos que se alternaran */}
       <main className="container">
-        <Router data={ data.data ? data.data : data }/>
+        <Result data={ data } />
+        <Router data={ data }/>
       </main>
-      <Result data={data} />
       <Footer links={Social}/>
     </BrowserRouter>
   )
