@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
 export default function Nav(props){
     const { url, appName, links, action } = props;
+    const search = "texto";
+    const giphy = `https://api.giphy.com/v1/gifs/search?api_key=LanYkWCgNLIRDm6XZOZWnYH9yZHOProA&q=${search}&limit=10&offset=0&rating=g&lang=es`
+
     return(
         <nav className="navbar navbar-dark navbar-expand-md | bg-dark bg-gradient | px-3 sticky-top">
             <a href="#" className="navbar-brand">{ appName }</a>
-            <button className="navbar-toggler navbar-toggler-icon"></button>
+            <button className="navbar-toggler navbar-toggler-icon" onClick={() => action(giphy)}></button>
             <List links={ links } action={action} url={url} />
         </nav>
 ) }
