@@ -8,13 +8,25 @@ import Results from './components/results'
 import Pagination from './components/pagination'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [results, setResults] = useState({
+    pagination: {
+      total_count: 0,
+      count: 0,
+      offset: 0
+    }
+  })
+
+  async function getData(url){
+    let data = await fetch(url);
+    data = await data.json();
+    setResults(data);
+  }
 
   return(
     <>
-      <Search/>
+      <Search getData={getData}/>
       <Results/>
-      <Pagination/>
+      <Pagination pagination={results.pagination}/>
     </>
   )
 }
