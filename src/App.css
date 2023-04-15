@@ -33,7 +33,7 @@
 }
 .card {
   padding: 2em;
-  flex: 1 0 min(300px, 100%);
+  min-width: min(300px,100%);
 }
 
 .read-the-docs {
