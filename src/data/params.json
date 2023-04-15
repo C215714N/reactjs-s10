@@ -1,0 +1,8 @@
+{
+    "SERVER": "https://api.giphy.com/v1/gifs/",
+    "API_KEY": "LanYkWCgNLIRDm6XZOZWnYH9yZHOProA",
+    "LIMIT": 10,
+    "OFFSET": 0,
+    "RATE": "r",
+    "LANG": "es"
+}

@@ -13,7 +13,7 @@ capacitaciones: [
     "js"
 ],
 cursos: [{
-    nombre: "react-js"
+    nombre: "react-js",
     dias: "sabados",
     inicio: "10hs",
     fin: "13hs"
