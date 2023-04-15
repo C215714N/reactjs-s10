@@ -9,6 +9,7 @@ import Pagination from './components/pagination'
 
 function App() {
   const [results, setResults] = useState({
+    data: [{}],
     pagination: {
       total_count: 0,
       count: 0,
@@ -25,7 +26,7 @@ function App() {
   return(
     <>
       <Search getData={getData}/>
-      <Results/>
+      <Results data={results.data}/>
       <Pagination pagination={results.pagination}/>
     </>
   )
