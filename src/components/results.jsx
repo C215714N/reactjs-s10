@@ -1,7 +1,8 @@
+import { useResultContext } from '../actions/Context';
 import { Card } from './Card';
 
 function Results (props){
-    const { data } = props;
+    const { data } = useResultContext();
     return(
         <main>
             <h2>{ data.length > 1 ? 

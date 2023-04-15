@@ -12,8 +12,8 @@ function App() {
   return(
     <ContextAPI>
       <Search/>
-      {/* <Results/>
-      <Pagination/> */}
+      <Results/>
+      <Pagination/> 
     </ContextAPI>
   )
 }

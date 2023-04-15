@@ -35,26 +35,25 @@ function ContextAPI(props){
             case "NEXT":
                 setParams((params) => ({
                     ...params, 
-                    offset: offset + limit 
+                    OFFSET: OFFSET < results.pagination.total_count ? OFFSET + LIMIT : OFFSET
                 }))
             break;
             case "PREV":
                 setParams((params) => ({
                     ...params, 
-                    offset: offset - limit
+                    OFFSET: OFFSET < LIMIT ? 0 : OFFSET - LIMIT
                 }))
             break;
             case "PAGE":
                 setParams((params) => ({
                     ...params, 
-                    offset: limit * value
+                    OFFSET: LIMIT * value
                 }))
             break;
             default: 
                 setParams(params);
                 setResults(results);
         }
-        console.log(params, results);
     }
 
     return(
