@@ -5,7 +5,7 @@ export const Card = ({data}) =>
         <h3 className="card-title">{data.title}</h3>
     </header>
     <div className="card-body">
-        <p>{ data.username }</p>
+        <p>{ data.username === "" ? "Anonymous" : data.username}</p>
     </div>
     <footer className="card-footer d-flex gap-1">
         <button><i className="fa fa-heart"></i></button>
